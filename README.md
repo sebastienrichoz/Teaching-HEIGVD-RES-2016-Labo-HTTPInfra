@@ -26,10 +26,19 @@ The third objective is to practice our usage of Docker. All the components of th
 ### Acceptance criteria
 
 * You have a GitHub repo with everything needed to build the Docker image.
+  * Navigate to docker-images/apache-php-image folder
 * You do a demo, where you build the image, run a container and access content from a browser.
+  * *In vagrant VM with IP 192.168.42.42*
+  * docker build -t res/apache_php
+  * docker run -d -p 9090:80 res/apache_php
+  * Open a browser on your OS and enter this ip address : 192.168.42.42:9090
 * You have used a nice looking web template, different from the one shown in the webcast.
+  * source: http://startbootstrap.com/template-overviews/creative/
 * You are able to explain what you do in the Dockerfile.
+  * Copy the content of 'content' folder in apache file system
 * You are able to show where the apache config files are located (in a running container).
+  * docker exec -it <name_of_containe> /bin/bash
+  * cd /etc/apache2/
 * You must have done the demo on May 25th at the latest.
 
 
