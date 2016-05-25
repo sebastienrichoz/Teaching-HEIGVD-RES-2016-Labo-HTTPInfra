@@ -37,7 +37,7 @@ The third objective is to practice our usage of Docker. All the components of th
 * You are able to explain what you do in the Dockerfile.
   * Copy the content of 'content' folder in apache file system
 * You are able to show where the apache config files are located (in a running container).
-  * docker exec -it <name_of_containe> /bin/bash
+  * docker exec -it *name_of_container* /bin/bash
   * cd /etc/apache2/
 * You must have done the demo on May 25th at the latest.
 
