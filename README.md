@@ -59,8 +59,9 @@ The third objective is to practice our usage of Docker. All the components of th
   * ```docker run -d -p 9090:3000 res/express```
   * Open your favorite browser on your OS and enter IP 192.168.42.42:9090
 * You generate dynamic, random content and return a JSON payload to the client.
-  * Random content generated with 'Chance' package
-  * Express package for handling HTTP requests
+  * ```npm init```
+  * Random content generated with 'Chance' package (```npm install chance --save```)
+  * Express package for handling HTTP requests (```npm install --no-bin-links express --save```)
 * You cannot return the same content as the webcast (you cannot return a list of people).
   * Returning a list of locations
 * You don't have to use express.js; if you want, you can use another JavaScript web framework or event another language.
