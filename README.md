@@ -52,11 +52,21 @@ The third objective is to practice our usage of Docker. All the components of th
 ### Acceptance criteria
 
 * You have a GitHub repo with everything needed to build the Docker image.
+  * Browse in folder docker-images/dynamic-data/
 * You do a demo, where you build the image, run a container and access content from a browser.
+  * Navigate to the folder containing the Dockerfile 
+  * ```docker build -t res/express .```
+  * ```docker run -d -p 9090:3000 res/express```
+  * Open your favorite browser on your OS and enter IP 192.168.42.42:9090
 * You generate dynamic, random content and return a JSON payload to the client.
+  * Random content generated with 'Chance' package
+  * Express package for handling HTTP requests
 * You cannot return the same content as the webcast (you cannot return a list of people).
+  * Returning a list of locations
 * You don't have to use express.js; if you want, you can use another JavaScript web framework or event another language.
+  * I want to use express.js ;)
 * You must have done the demo on June 1st at the latest.
+  * Working on it...
 
 
 ## Step 3: Reverse proxy with apache (static configuration)
