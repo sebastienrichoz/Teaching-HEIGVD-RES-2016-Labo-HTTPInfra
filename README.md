@@ -83,8 +83,18 @@ The third objective is to practice our usage of Docker. All the components of th
 
 * You have a GitHub repo with everything needed to build the Docker image for the container.
 * You do a demo, where you start from an "empty" Docker environment (no container running) and where you start 3 containers: static server, dynamic server and reverse proxy; in the demo, you prove that the routing is done correctly by the reverse proxy.
+  * ```docker run -d --name apache_static res/apache_php```
+  * ```docker run -d --name express_dynamic res/express```
+  * Inspect ip address of container with ```docker inspect <container_name>```
+  * Match ip in 001-reverse-proxy.conf file
+  * Go in folder where the Dockerfile stands
+  * ```docker build -t res/apache_rp .```
+  * ```docker run -p 8080:80 --name reverse_proxy res/apache_rp```
+  * Open a browser and enter `demo.res.ch:8080` and `demo.res.ch:8080/api/locations/`
 * You can explain and prove that the static and dynamic servers cannot be reached directly (reverse proxy is a single entry point in the infra). 
+  * Containers were not mapped so they can't be accessed by something else than the configured reverse proxy
 * You are able to explain why the static configuration is fragile and needs to be improved.
+  * You have to inspect the dynamic IP address allocated for each container by Docker and configure it each time in the .conf file
 * You must have done the demo on June 8th at the latest.
 
 
