@@ -67,7 +67,6 @@ The third objective is to practice our usage of Docker. All the components of th
 * You don't have to use express.js; if you want, you can use another JavaScript web framework or event another language.
   * I want to use express.js ;)
 * You must have done the demo on June 1st at the latest.
-  * Working on it...
 
 
 ## Step 3: Reverse proxy with apache (static configuration)
@@ -108,8 +107,15 @@ The third objective is to practice our usage of Docker. All the components of th
 
 * You have a GitHub repo with everything needed to build the various images.
 * You do a complete, end-to-end demonstration: the web page is dynamically updated every few seconds (with the data coming from the dynamic backend).
+  * `docker run -d --name apache_static res/apcahe_php`
+  * `docker run -d --name express_dynamic res/express`
+  * At this stage, check ip addresses of both running container with `docker inspect <container> | grep -i ipadd`
+  * `docker run -d -p 8080:80 --name apache_rp res/apache_rp`
+  * Go on a browser and enter this address `demo.res.ch:8080`
 * You are able to prove that AJAX requests are sent by the browser and you can show the content of th responses.
+  * It's displayed in console logs (or use postman)
 * You are able to explain why your demo would not work without a reverse proxy (because of a security restriction).
+  * Because the call in getJSON method is made on `/api/locations/`. This path depends on the reverse proxy configuration.
 * You must have done the demo on June 8th at the latest.
 
 ## Step 5: Dynamic reverse proxy configuration
