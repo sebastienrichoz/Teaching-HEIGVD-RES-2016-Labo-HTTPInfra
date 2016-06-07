@@ -138,7 +138,7 @@ The third objective is to practice our usage of Docker. All the components of th
   * Start a static apache container
   * Start a dynamic express container
   * Inspect their IP address with `docker inspect <container> | grep -i ipaddress`
-  * Start an apache reverse proxy container by setting the environment variables `docker run -e STATIC_APP=<ip_static_cont> -e DYNAMMIC_APP=<ip_express_cont> -d --name apache_rp res/apache_rp -p 8080:80`
+  * Start an apache reverse proxy container by setting the environment variables `docker run -e STATIC_APP=<ip_static_cont> -e DYNAMMIC_APP=<ip_express_cont> -d --name apache_rp -p 8080:80 res/apache_rp`
 * You are able to explain how you have implemented the solution and walk us through the configuration and the code.
   * I followed all the webcasts
   * `apache2_foreground` is a script executed when the apache_RP container is started
